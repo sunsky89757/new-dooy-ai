@@ -100,7 +100,7 @@ export default {
     server:'服务端'
     ,about:'关于'
     ,model:'模型'
-    ,sysname:'AI绘图'
+    ,sysname:'Dooy-AI'
   }
 
   ,mjtab:{
@@ -268,7 +268,7 @@ export default {
 
     ,findVersion:'发现更新版本'
     ,yesLastVersion:'已是最新版本'
-    ,infoStar:'此项目开源于 <a  class="text-blue-600 dark:text-blue-500" href="https://github.com/Dooy/chatgpt-web-midjourney-proxy" target="_blank"> GitHub </a>，免费且基于 MIT 协议，没有任何形式的付费行为！ </p><p>如果你觉得此项目对你有帮助，请在 GitHub 帮我点个 Star，谢谢！'
+    ,infoStar:'顶级AI大模型聚合平台，GPT、gemini-pro、claude-3 让更多人无门槛体验人工智能带来的便利，让人工智能工具帮助你更好的开展学习、工作、科研等等。从现在开始，无需注册登录，不限次数使用，无需魔法上网，无需下载，没有广告，只需轻轻一点，即刻开始体验。'
     ,setBtSaveChat:'仅保存会话'
     ,setBtSaveSys: '保存至系统'
 

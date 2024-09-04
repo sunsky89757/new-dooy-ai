@@ -89,15 +89,15 @@ const  isShow = computed(()=>{
         <p v-html="$t('mj.infoStar')"></p>
       </div>
       <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
-      <p v-if="isChatGPTAPI" class=" flex items-center justify-between">
+      <p v-if="isChatGPTAPI" class="flex items-center justify-between">
         <div>
-        {{ $t("setting.monthlyUsage") }}：{{ config?.usage ?? '-' }}
+          {{ $t("setting.monthlyUsage") }}：{{ config?.usage ? '$' + config.usage : '-' }}
         </div>
         <div>
-        {{ $t("mj.totalUsage") }}：{{ config?.hard_limit_usd ?(+config?.hard_limit_usd).toFixed(2): '-' }}
+          {{ $t("mj.totalUsage") }}：{{ config?.hard_limit_usd ? '$' + (+config.hard_limit_usd).toFixed(2) : '-' }}
         </div>
         <div>
-        {{ $t("setting.balance") }}：{{ config?.remaining ?? '-' }}
+          {{ $t("setting.balance") }}：{{ config?.remaining ? '$' + config.remaining : '-' }}
         </div>
       </p>
       <p v-if="!isChatGPTAPI">
