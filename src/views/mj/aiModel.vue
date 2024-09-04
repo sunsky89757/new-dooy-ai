@@ -205,7 +205,7 @@ onMounted(() => {
 
 </template>
 <div v-else class="text-right cursor-pointer mb-4" @click="st.openMore=true">
-    <NTag  type="primary" round size="small" :bordered="false" class="!cursor-pointer">More...</NTag>
+    <NTag  type="primary" round size="small" :bordered="false" class="!cursor-pointer">更多...</NTag>
 </div>
 
  <section class=" text-right flex justify-end space-x-2"  >
