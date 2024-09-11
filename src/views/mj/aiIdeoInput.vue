@@ -60,6 +60,13 @@ const createImg= async ()=>{
 onMounted(()=>{
     homeStore.setMyData({ms:ms });
 })
+
+const clearInput = ()=>{
+    st.value.image_url='';
+    f.value.prompt='';
+    f.value.seed=123456;
+    fsFile.value= null;
+}
 </script>
 <template>
 <div class="overflow-y-auto bg-[#fafbfc]   dark:bg-[#18181c] h-full ">
@@ -83,11 +90,11 @@ onMounted(()=>{
     </section>
     <section class="mb-4 flex justify-between items-center" >
          <div>Seed</div>
-          <NInput  v-model:value="st.seed" size="small"  class="!w-[70%]"  clearable placeholder="种子数字 1~2147483647" />
+          <NInput  v-model:value="st.seed" size="small"  class="!w-[70%]"  clearable :placeholder="$t('mj.seed')" />
     </section>
     <section class="mb-4 flex justify-between items-center" >
          <div>{{ $t('mj.nohead') }}</div>
-          <NInput v-model="f.negative_prompt" size="small"  class="!w-[70%]"  clearable placeholder="不含物体的文字放这儿" />
+          <NInput v-model="f.negative_prompt" size="small"  class="!w-[70%]"  clearable :placeholder="$t('mj.negative_prompt')" />
     </section>
 
     <section class="mb-4 flex justify-between items-center" >
@@ -105,9 +112,10 @@ onMounted(()=>{
                 <div class="text-center" v-else>{{ $t('video.selectimg') }}</div> 
                 
             </div>
-            <div  class=" absolute right-[-5px] top-[-5px] cursor-pointer" @click="st.image_url='';"  v-if="st.image_url"><NTag type="success" size="small" :bordered="false" round  ><span class="cursor-pointer">{{$t('video.clear')}}</span></NTag></div>
         </div>
-        <div>
+        <div class="text-right">
+            <div  class=" cursor-pointer pb-2" @click="clearInput"  v-if="st.image_url|| f.prompt "><NTag type="success" size="small" :bordered="false" round  ><span class="cursor-pointer">{{$t('video.clear')}}</span></NTag></div>
+
             <NButton type="primary" @click="createImg()" :disabled="!f.prompt"  >{{ $t('mjchat.imgcreate') }}</NButton>
         </div>
     </section>
