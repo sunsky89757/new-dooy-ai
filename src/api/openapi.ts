@@ -407,7 +407,7 @@ export const subModel= async (opt: subModelType)=>{
         try {
             mlog('🐞非流输出',body  )
             opt.onMessage({text: t('mj.thinking') ,isFinish: false })
-            let obj :any= await gptFetch( gptGetUrl('/v1/chat/completions'),body  )
+            let obj :any= await gptFetch( '/v1/chat/completions',body  )
             //mlog('结果 >>',obj   )
             opt.onMessage({text:obj.choices[0].message.content??'' ,isFinish: true ,isAll:true})
             
@@ -535,8 +535,8 @@ export const openaiSetting= ( q:any,ms:MessageApiInjection )=>{
                 LUMA_KEY:key,
                 RUNWAY_KEY:key,
                 VIGGLE_KEY:key,
-                IDEO_KEY:url,
-                KLING_KEY:url,
+                IDEO_KEY:key,
+                KLING_KEY:key,
              } )
             blurClean();
             gptServerStore.setMyData( gptServerStore.myData );
