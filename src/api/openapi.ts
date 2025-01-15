@@ -26,6 +26,8 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gpt-4o-2024-05-13": "2023-10", 
   "o1-preview-2024-09-12": "2023-10", 
   "o1-preview": "2023-10", 
+  "o1": "2023-10", 
+  "o1-2024-12-17": "2023-10", 
   "o1-mini": "2023-10", 
   "o1-mini-2024-09-12": "2023-10", 
   "gpt-4o": "2023-10", 
@@ -532,6 +534,9 @@ export const openaiSetting= ( q:any,ms:MessageApiInjection )=>{
                 KLING_SERVER:url,
                 PIKA_SERVER:url,
                 UDIO_SERVER:url,
+                PIXVERSE_SERVER:url,
+                
+                
                 
                 OPENAI_API_KEY:key,
                 MJ_API_SECRET:key, 
@@ -543,6 +548,7 @@ export const openaiSetting= ( q:any,ms:MessageApiInjection )=>{
                 KLING_KEY:key,
                 PIKA_KEY:key,
                 UDIO_KEY:key,
+                PIXVERSE_KEY:key,
              } )
             blurClean();
             gptServerStore.setMyData( gptServerStore.myData );
