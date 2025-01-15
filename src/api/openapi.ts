@@ -336,7 +336,7 @@ export const subModel= async (opt: subModelType)=>{
     //
     let model= opt.model?? ( gptConfigStore.myData.model?gptConfigStore.myData.model: "gpt-3.5-turbo");
     let max_tokens= gptConfigStore.myData.max_tokens;
-    let temperature= 0.5;
+    let temperature= 1;
     let top_p= 1;
     let presence_penalty= 0 , frequency_penalty=0;
     if(opt.uuid){
