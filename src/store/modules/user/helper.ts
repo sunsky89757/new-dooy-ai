@@ -18,7 +18,7 @@ export interface UserState {
 export function defaultSetting(): UserState {
   return {
     userInfo: {
-      avatar: 'https://www.gptacg.com/wp-content/uploads/2024/08/cropped-android-chrome-192x192-2.png',
+      avatar: 'https://www.aijuhe.top/wp-content/uploads/2024/08/cropped-android-chrome-192x192-2.png',
       name:  t('mjset.sysname'),//'AI绘图',
       description: '聚合AI - 让全球顶级AI人人可用',
     },
